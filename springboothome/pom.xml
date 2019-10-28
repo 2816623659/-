@@ -1,0 +1,125 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.7.RELEASE</version>
+	</parent>
+	<groupId>springboothome</groupId>
+	<artifactId>springboothome</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<mybatis-version>3.4.5</mybatis-version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<!-- 支持 @ConfigurationProperties 注解 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+
+		</dependency>
+
+		<!--数据库连接池 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.10</version>
+		</dependency>
+		<!--mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.48</version>
+		</dependency>
+		<!--数据库依赖 -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc14</artifactId>
+			<version>10.2.0.1.0</version>
+		</dependency>
+		<!--mybatis通用mapper -->
+		<dependency>
+			<groupId>tk.mybatis</groupId>
+			<artifactId>mapper-spring-boot-starter</artifactId>
+			<version>2.1.5</version>
+		</dependency>
+
+		<!-- 阿里云手机号码 -->
+		<!-- https://mvnrepository.com/artifact/io.github.pactstart/aliyun-sms-spring-boot-starter -->
+		<dependency>
+			<groupId>io.github.pactstart</groupId>
+			<artifactId>aliyun-sms-spring-boot-starter</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<!-- QQ邮箱 -->
+		<!-- https://mvnrepository.com/artifact/commons-email/commons-email -->
+		<dependency>
+			<groupId>commons-email</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/net.sourceforge.nekohtml/nekohtml 标签/-->
+		<dependency>
+			<groupId>net.sourceforge.nekohtml</groupId>
+			<artifactId>nekohtml</artifactId>
+			<version>1.9.22</version>
+		</dependency>
+
+		<!--json -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.9.3</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+
+	</dependencies>
+
+	<build>
+
+		<plugins>
+
+			<plugin>
+
+				<groupId>org.springframework.boot</groupId>
+
+				<artifactId>spring-boot-maven-plugin</artifactId>
+
+				<configuration>
+
+					<fork>true</fork>
+
+				</configuration>
+
+			</plugin>
+
+		</plugins>
+
+	</build>
+</project>

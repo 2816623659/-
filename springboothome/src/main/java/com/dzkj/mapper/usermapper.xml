@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dzkj.mapper.usermapper">
+<insert id="inserttell">
+	insert into users(userid,tellphone,pwd,time) values(seq_users.nextval,#{tellphone},#{pwd},#{time})
+</insert>
+	<update id="updatepassword">
+		update users set pwd=#{usernewpassword} where
+		userid=#{userid}
+	</update>
+	<update id="updatepay">
+		update users set paypwd=#{paypwd} where
+		userid=#{userid}
+	</update>
+	<update id="updatephone">
+		update users set tellphone=#{tellphone} where
+		userid=#{userid}
+	</update>
+	<update id="updateusers">
+		update users set  uzname=#{uzname},nikname=#{nikname}, usex=#{usex}, birthday=#{birthday}, tellphone=#{tellphone} ,email=#{email} where
+		userid=#{userid}
+	</update>
+</mapper>
